@@ -1,0 +1,61 @@
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js" ></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Parcial Labo 3</title>
+</head>
+<body>
+            <div id="divFlex">
+                <div id="divSpinner" class="spinner" hidden></div>              
+                <table id="tabla" class="grilla tabla">
+                <thead>
+                    <tr>
+                        <th> ID</th>
+                        <th> Nombre</th>
+                        <th> Apellido</th>
+                        <th> Localidad</th>
+                        <th> Sexo</th>
+                        <!-- <th> Foto</th> -->
+                    </tr>
+                </thead>
+                </table>
+                   
+                <dialog id="favDialog" >
+                    <form method="dialog" >              
+                        <div style="display: flex; justify-content: end;">
+                            <input type="button" value="X"  class="closeButton" onclick="closeDialog()"/>
+ 
+                        </div>
+                        <div >
+                            <input type="hidden" id="id"/> 
+                            <div id="divNombre">
+                                <label >Nombre:</label>
+                                <input type="text" id="name" /> 
+                            </div>
+                            <div id="divApellido">
+                                <label >Apellido:</label>
+                                <input type="text" id="lastname" /> 
+                            </div>
+                            <div id="divSexo">
+                                <label>Sexo:</label>
+                                <input type="radio" name="gender" id="Male" value="Male">Male
+                                <input type="radio" name="gender" id="Female" value="Female">Female
+                            </div>
+                            <div id="divLocalidad">
+                                <select name="localidad" id="localidad_select">
+                                </select>
+                            </div>
+                            <div id="divModificar"> 
+                                <input type="button" value="Modificar" class="botonMod" onclick="modificarFila()"/> 
+                            </div>
+                        </div>
+                    </form>
+                </dialog>     
+              
+            </div>      
+</body>
+</html>
